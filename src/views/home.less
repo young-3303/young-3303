@@ -40,6 +40,7 @@
       100% no-repeat;
       margin-bottom: 94px;
     }
+
     .word3 {
       font-size: 28px;
       letter-spacing: 2.3333332538604736px;
@@ -59,6 +60,7 @@
       display: flex;
       margin-top: 56px;
       .recommend-list {
+        position: relative;
         margin-right: 7px;
         width: 295px;
         height: 160px;
@@ -78,6 +80,23 @@
           margin-left: 25px;
           overflow: hidden;
           text-overflow: ellipsis;
+          display: block;
+        }
+        .general {
+          position: absolute;
+          top: 117px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 120px;
+          height: 18px;
+          overflow-wrap: break-word;
+          color: rgba(255, 255, 255, 1);
+          font-size: 18px;
+          letter-spacing: 2px;
+          font-family: SimSong-Regular;
+          text-align: center;
+          white-space: nowrap;
+          line-height: 18px;
           display: block;
         }
       }
@@ -123,6 +142,192 @@
       .imgItem {
         width: 296px;
         height: 200px;
+      }
+    }
+    .theMore {
+      margin-top: -80px;
+      //width: 21px;
+      //height: 8px;
+      //background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngd58b09eb49ce1ba3079570cd6394a24ade803b29bbea3f8f99ed32666290a925) -1px -1px
+      //no-repeat;
+    }
+    .trust {
+      margin-top: 111px;
+      .trustInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        span {
+          &:nth-child(1) {
+            width: 240px;
+            height: 32px;
+            margin-bottom: 12px;
+            overflow-wrap: break-word;
+            color: rgba(0, 0, 0, 1);
+            font-size: 32px;
+            letter-spacing: 8px;
+            font-family: SimSong-Bold;
+            text-align: center;
+            white-space: nowrap;
+            line-height: 32px;
+            display: block;
+          }
+          &:nth-child(2) {
+            width: 228px;
+            height: 22px;
+            overflow-wrap: break-word;
+            color: rgba(0, 0, 0, 1);
+            font-size: 18px;
+            letter-spacing: 3px;
+            font-family: SimSong-Regular;
+            text-align: left;
+            white-space: nowrap;
+            line-height: 22px;
+            display: block;
+          }
+        }
+      }
+      .trustList {
+        height: 401px;
+        background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng914abb3a1686b73171bba37ead0181ec685af707d4762b8c4b9d770915ce9336)
+        100% no-repeat;
+        width: 1197px;
+        margin-top: 78px;
+        display: flex;
+        flex-wrap: wrap;
+        .trustItem {
+          width: 200px;
+          height: 80px;
+          margin-right: 39px;
+          &:nth-child(5n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+    .info6 {
+      width: 654px;
+      height: 30px;
+      margin: 207px auto 52px auto;
+      overflow-wrap: break-word;
+      color: rgba(0, 0, 0, 1);
+      font-size: 30px;
+      letter-spacing: 4px;
+      font-family: SimSong-Bold;
+      text-align: center;
+      white-space: nowrap;
+      line-height: 30px;
+      display: block;
+    }
+    .contactUs {
+      margin-bottom: 38px;
+      .tel {
+        //height: 51px;
+        //background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng2a7b2810553e5da685772e4e7418f888acbd2213f5302d7737cbd632cf4b807f) -1px -1px
+        //no-repeat;
+        //width: 469px;
+        //padding: 13px 0 0 34px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        span {
+          width: 145px;
+          height: 33px;
+          overflow-wrap: break-word;
+          color: rgba(0, 0, 0, 1);
+          font-size: 18px;
+          letter-spacing: 0.75px;
+          font-family: BanglaMN;
+          text-align: center;
+          white-space: nowrap;
+          line-height: 33px;
+          display: inline-block;
+        }
+      }
+      .wechat {
+        margin-top: 27px;
+        margin-bottom: 28px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        .icon {
+          width: 20px;
+          height: 16px;
+          margin-bottom: 5px;
+          background: url(https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng030e4cc3622afabe62a7814b59c45c4a6c84d456a29f2db02321e7e15bb403da)
+          0px 0px no-repeat;
+        }
+        .nickName {
+          width: 85px;
+          height: 22px;
+          overflow-wrap: break-word;
+          color: rgba(0, 0, 0, 1);
+          font-size: 18px;
+          letter-spacing: 2px;
+          font-family: AvenirNextCondensed-Regular;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 22px;
+          display: block;
+        }
+      }
+      .email {
+        text-align: center;
+        display: inline-block;
+        span {
+          overflow-wrap: break-word;
+          color: rgba(0, 0, 0, 1);
+          font-size: 18px;
+          letter-spacing: 2px;
+          font-family: AvenirNextCondensed-Regular;
+          text-align: left;
+          white-space: nowrap;
+          line-height: 22px;
+          display: block;
+          &:nth-child(1) {
+            width: 139px;
+            height: 22px;
+          }
+          &:nth-child(2) {
+            width: 121px;
+            height: 22px;
+          }
+        }
+      }
+      .author {
+        margin: 15px auto 0 auto;
+        width: 153px;
+        height: 22px;
+        overflow-wrap: break-word;
+        color: rgba(0, 0, 0, 1);
+        font-size: 18px;
+        font-family: SimSong-Regular;
+        text-align: left;
+        white-space: nowrap;
+        line-height: 22px;
+        display: block;
+      }
+    }
+    .subFoot {
+      p {
+        margin: 0;
+        &:nth-child(1) {
+          font-size: 12px;
+          font-family: SimSong-Regular, SimSong;
+          font-weight: 400;
+          color: #999999;
+          line-height: 22px;
+        }
+        &:nth-child(2) {
+          overflow-wrap: break-word;
+          color: rgba(153, 153, 153, 1);
+          font-size: 12px;
+          font-family: SimSong-Regular;
+          //text-align: left;
+          white-space: nowrap;
+          line-height: 22px;
+        }
       }
     }
   }
