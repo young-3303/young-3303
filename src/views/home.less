@@ -40,8 +40,35 @@
       100% no-repeat;
       margin-bottom: 94px;
     }
+    /deep/.el-carousel__indicator--horizontal {
+      display: flex;
+      flex-direction: column;
+    }
+    /deep/.el-carousel__indicators {
+      margin-top: 40px;
+      display: flex;
+      justify-content: center;
 
+    }
+    /deep/.el-carousel__button {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+    /deep/.el-carousel__indicator.is-active button {
+      background: #000000;
+      opacity: 1;
+      border: none;
+    }
+    /deep/.el-carousel__indicators--outside button {
+      width: 8px;
+      height: 8px;
+      border: 1px solid #000000;
+      background: #ffffff;
+      opacity: 1;
+    }
     .word3 {
+      margin-top: 94px;
       font-size: 28px;
       letter-spacing: 2.3333332538604736px;
       font-family: SimSong-Bold;

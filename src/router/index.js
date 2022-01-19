@@ -12,6 +12,21 @@ const routes = [
     component: () => import('../views/Home')
   },
   {
+    path: '*',
+    redirect: '/',
+  },
+  {
+    path: '/case',
+    name: 'case',
+    // component: Home
+    component: () => import('../views/case/case')
+  },
+  {
+    path: '/contact',
+    name: 'contact',
+    component: () => import('../views/contact/contact')
+  },
+  {
     path: '/about',
     name: 'About',
     // route level code-splitting

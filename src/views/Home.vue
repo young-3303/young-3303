@@ -1,13 +1,12 @@
 <template>
   <div class="home">
     <div class="main">
-      <div class="swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">slider1</div>
-          <div class="swiper-slide">slider2</div>
-          <div class="swiper-slide">slider3</div>
-        </div>
-      </div>
+      <el-carousel trigger="click" arrow="never" :autoplay="true" indicator-position="outside">
+        <el-carousel-item v-for="item in carousel" :key="item.url">
+<!--          <h3>{{ item }}</h3>-->
+          <img :src="item.url" alt="">
+        </el-carousel-item>
+      </el-carousel>
       <div class="word3">坚持以创新设计、专业技术为核心，为企业提供定制解决方案</div>
       <div class="word5">
         产品策略/需求分析、用户体验设计、交互与视觉设计、软件设计开发
@@ -78,9 +77,9 @@
       </div>
       <div class="contactUs">
         <div class="tel">
-<!--          <span>186-8882-5712</span>-->
-<!--          <img src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng9db74a15534b4829a7958b03702e0978bd140dfc952964ec389345777d7f39b6" alt="">-->
-<!--          <span>0755-88882571</span>-->
+          <!--          <span>186-8882-5712</span>-->
+          <!--          <img src="https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng9db74a15534b4829a7958b03702e0978bd140dfc952964ec389345777d7f39b6" alt="">-->
+          <!--          <span>0755-88882571</span>-->
           <img src="../../public/images/contact.png" alt="">
         </div>
         <div class="wechat">
@@ -109,7 +108,7 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue';
-import Swiper from 'swiper';
+
 
 export default {
   name: 'Home',
@@ -117,19 +116,10 @@ export default {
     for (let i = 0; i < 15; i++) {
       this.trustList.push({
         url: 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng5bf8a0e1fa47f358b30b98179eb2a421664b3225ad52e3e63773bc3eee5f0d5c'
-      })
+      });
     }
   },
   mounted() {
-    var mySwiper = new Swiper('.swiper', {
-      autoplay: true,//可选选项，自动滑动
-      direction: 'horizontal',
-    })
-
-//如果你初始化时没有定义Swiper实例，后面也可以通过Swiper的HTML元素来获取该实例
-    new Swiper('.swiper')
-    mySwiper = document.querySelector('.swiper').swiper
-    mySwiper.slideNext();
   },
   data() {
     return {
@@ -161,14 +151,21 @@ export default {
         {url: 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngde0413c6c4029e26ffdfcba3aa9eeb265fa29dc45a75d9da8d697e551353bd73'},
         {url: 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng5d0a38e9a0cf115ef897ac42ed52c3a64870ab76edd373731196049d14cd0d86'},
         {url: 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng43cc9cea37501c7a1aa3203a19ef23ddb998f68051f840c3f8f84f7f5d233794'},
-        {url: 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng0b8a0c3f6c6e724bc9871ba0593f451afe53e516e4c7857a6ff58adde52efa67', size: 'large'},
+        {
+          url: 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng0b8a0c3f6c6e724bc9871ba0593f451afe53e516e4c7857a6ff58adde52efa67',
+          size: 'large'
+        },
         {url: 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng8b697ac6adb8290033015097f447f24beb8dc38f8e7a28ba177baefdc8de46ad'},
         {url: 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng50fa4c388f611a4d8b3dab8c5c1ab3b150efa71c498ba19db479140b26290c97'},
         {url: 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPngb3d382d54e7c3ba5ac8f9afe663377b1a52d3d421086e6a3d486ae0045246f18'}
       ],
       trustList: [
         // {url: 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng5bf8a0e1fa47f358b30b98179eb2a421664b3225ad52e3e63773bc3eee5f0d5c'}
-      ]
+      ],
+      carousel: [
+        {url: 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng4b665b707c4b2ccb242f5842ce0bea4691096dfdfaacf9dd1f58aa23fc2a58eb'},
+        {url: 'https://lanhu.oss-cn-beijing.aliyuncs.com/SketchPng358bf89352f38c5a16c98fbbcdcc8dbd6132d7a9f9d7f6bbb2834df74e3eeb10'}
+      ] //轮播图列表
     };
   },
   components: {
@@ -178,5 +175,22 @@ export default {
 </script>
 
 <style scoped lang="less" src="./home.less">
+.el-carousel__item h3 {
+  color: #475669;
+  font-size: 18px;
+  opacity: 0.75;
+  line-height: 300px;
+  margin: 0;
+}
 
+.el-carousel__item:nth-child(2n) {
+  background-color: #99a9bf;
+}
+
+.el-carousel__item:nth-child(2n+1) {
+  background-color: #d3dce6;
+}
+.main {
+
+}
 </style>
